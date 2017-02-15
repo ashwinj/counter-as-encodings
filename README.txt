@@ -1,7 +1,6 @@
 Software Implementation for CtMAC1, CtMAC2st and CtHAIFA
 
-Requires AES-NI and SSE4 compatible architectures. In the following discussion we let [S] \in \{8,16,32,64\}. We also assume that
-the user's current working directory is the one that contains this README file.
+Requires AES-NI and SSE4 compatible architectures. In the following discussion we let [S] \in \{8,16,32,64\}. We also assume that the user's current working directory is the one that contains this README file.
 
 The measurement technique used in this implementation has been taken from Shay Gueron's white paper on AES-NI [1].
 
@@ -37,8 +36,7 @@ The measurement technique used in this implementation has been taken from Shay G
 			$ ./ZZZ > ./ZZZ.dat
 
 	1.3 Output format
-		Each of the above executables outputs the "<number of AES calls><space><cpb>" for message lengths starting from
-		2^7 bytes to 2^25 bytes.
+		Each of the above executables outputs the "<number of AES calls><space><cpb>" for message lengths starting from	2^7 bytes to 2^25 bytes.
 		
 
 2. CtMAC2^{st}		==>	stateful-deterministic
@@ -68,8 +66,7 @@ The measurement technique used in this implementation has been taken from Shay G
 			$ ./ZZZ > ./ZZZ.dat
 
 	1.3 Output format
-		Each of the above executables outputs the "<number of AES calls><space><cpb>" for message lengths starting from
-		2^7 bytes to 2^25 bytes.
+		Each of the above executables outputs the "<number of AES calls><space><cpb>" for message lengths starting from	2^7 bytes to 2^25 bytes.
 
 
 3. CtHAIFA	==>	haifa 
@@ -98,14 +95,10 @@ The measurement technique used in this implementation has been taken from Shay G
 			$ ./ZZZ > ./ZZZ.dat
 
 	1.3 Output format
-		Each of the above executables outputs the "<number of AES calls><space><cpb>" for message lengths starting from
-		2^7 bytes to 2^25 bytes.
+		Each of the above executables outputs the "<number of AES calls><space><cpb>" for message lengths starting from	2^7 bytes to 2^25 bytes.
 
 4. Data Assembly
-	Once the data has been collected for a particular scheme for each of the counter function, run X-data-assembler to assemble
-	the data in the required format. The data for table CtMAC1, CtMAC2^{st}, and CtHAIFA can be assembled using L-data-assembler, 
-	C-data-assembler, and H-data-assembler, respectively. These executables produce following results for message lengths starting
-	from 2^7 bytes to 2^20 bytes:
+	Once the data has been collected for a particular scheme for each of the counter function, run X-data-assembler to assemble	the data in the required format. The data for table CtMAC1, CtMAC2^{st}, and CtHAIFA can be assembled using L-data-assembler, C-data-assembler, and H-data-assembler, respectively. These executables produce following results for message lengths starting from 2^7 bytes to 2^20 bytes:
 	1) X-CALLS.dat		==>	Rate offered by various schemes under X.
 	2) X-CPB.dat		==>	CPB offered by various schemes under X.
 	3) X-LATEX.dat		==>	CPB data parsed in latex format. First column indicating message length has to be 
@@ -117,5 +110,4 @@ The measurement technique used in this implementation has been taken from Shay G
 	where X \in \{L,C,H\}.
 
 5. Currently Stored Results
-	In each of the three folders stateless-deterministic, statelful-deterministic, and haifa we have a folder named "data" which
-	contains data and graphs generated on Intel Xeon E5-2640 (Sandybridge) processor.
+	In each of the three folders stateless-deterministic, statelful-deterministic, and haifa we have a folder named "data" which contains data and graphs generated on Intel Xeon E5-2640 (Sandybridge) processor.
